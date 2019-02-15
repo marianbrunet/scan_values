@@ -1,0 +1,7 @@
+<launch>
+    <rosparam command="load" file="$(find scan_values)/src/config.yaml" />
+    <node pkg="scan_values" type="scan.py" name="scan_values" output="screen">
+        <param name="scan_subscriber_topic_name" value="scan"/>
+	<param name="scan_subscriber_queue_size" value="1"/>
+    </node>
+</launch>
